@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  background-color: #151414;
+}
+
+nav > img {
+  position: absolute;
+  top: 9%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  height: 2vw;
+}
+
+nav h3 {
+  position: relative;
+  height: 11vh;
+  padding: 0 1vw;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: all ease-in-out 0.25s;
+}
+
+nav h3:hover {
+  color: #000;
+  z-index: 9;
+}
+
+nav h3::after {
+  content: attr(data);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #e0f1f3;
+  transition: all ease-in-out 0.25s;
+}
+
+nav h3:hover::after {
+  top: 0;
+}
