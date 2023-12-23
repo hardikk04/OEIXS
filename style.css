@@ -63,3 +63,43 @@ nav h3:hover::after {
   -webkit-text-stroke: 1px #e0f1f3;
   color: transparent;
 }
+
+.scroller-text {
+  position: relative;
+  animation: scroller 40s linear infinite both;
+}
+
+@keyframes scroller {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.page4 {
+  overflow-x: hidden;
+}
+
+.page4-elem > img {
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.page4-elem:hover.page4-elem > img {
+  transform: rotate(-5deg);
+  scale: 1.1;
+}
+
+.scroller-text-box {
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.page4-elem:hover.page4-elem > .scroller-text-box {
+  opacity: 1;
+}
+
+.page4-scroller-right {
+  transform: translateX(-40%);
+}
+
+.page4-scroller-left {
+  transform: translateX(40%);
+}

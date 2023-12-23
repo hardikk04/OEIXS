@@ -60,3 +60,27 @@ function counter() {
     }
   }, 50);
 }
+
+t1.to(".page4-scroller-right", {
+  transform: "translateX(35%)",
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page4-scroller-right",
+    start: "top 90%",
+    end: "top -100%",
+    scrub: 1,
+    // markers: true,
+  },
+});
+
+t1.to(".page4-scroller-left", {
+  transform: "translateX(-35%)",
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page4-scroller-right",
+    start: "top 70%",
+    end: "top -100%",
+    scrub: 1,
+    // markers: true,
+  },
+});
