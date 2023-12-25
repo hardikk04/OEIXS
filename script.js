@@ -84,3 +84,36 @@ t1.to(".page4-scroller-left", {
     // markers: true,
   },
 });
+
+function swiperJs() {
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+}
+swiperJs();
+
+t1.to(".page6-animation", {
+  top: "-100%",
+  duration: 1,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page6-animation",
+    start: "top 80%",
+    // markers: true,
+    // scrub: 1,
+  },
+}).from(".page6-img>img", {
+  opacity: 0,
+  duration: 1,
+  delay: 1.2,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".page6-animation",
+    start: "top 80%",
+    // markers: true,
+  },
+});
